@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap");
+
+:root {
+  --LightCyan: hsl(193, 38%, 86%);
+  --NeonGreen: hsl(150, 100%, 66%);
+  --GrayishBlue: hsl(217, 19%, 38%);
+  --DarkGrayishBlue: hsl(217, 19%, 24%);
+  --DarkBlue: hsl(218, 23%, 16%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--DarkBlue);
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  padding: 30px;
+}
+
+.container {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h4 {
+  color: var(--LightCyan);
+  letter-spacing: 0.07rem;
+}
+
+.general {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.general div {
+  height: 70px;
+  width: 70px;
+  background-color: var(--DarkGrayishBlue);
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 20px;
+}
+
+section {
+  display: flex;
+  gap: 20px;
+}
+
+section div {
+  cursor: pointer;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 20px;
+}
+section div:hover {
+  border: 2px solid var(--NeonGreen);
+}
+section div.focus {
+  border: 2px solid var(--NeonGreen);
+}
+button {
+  cursor: pointer;
+  padding: 5px 20px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  background-color: var(--NeonGreen);
+  border: none;
+  color: var(--DarkBlue);
+  font-weight: 700;
+  border-radius: 7px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  background-color: var(--LightCyan);
+}
+
+button:disabled:hover {
+  box-shadow: none;
+}
+
+button:hover {
+  box-shadow: -2px -1px 20px 2px var(--NeonGreen);
+}
+
+div img {
+  width: 350%;
+}
+
+p.winner {
+  color: var(--NeonGreen);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  animation: archangel 1s infinite linear;
+}
+
+@keyframes archangel {
+  0% {
+    color: var(--NeonGreen);
+  }
+  50% {
+    color: var(--GrayishBlue);
+  }
+  100% {
+    color: var(--LightCyan);
+  }
+}
